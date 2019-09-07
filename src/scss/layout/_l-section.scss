@@ -1,0 +1,78 @@
+.l-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
+    &--intro {
+        margin-top: 115px;
+        background: url('../img/banner/background.png');
+        height: 90vh;
+        position: relative;
+        background-size: cover;
+        background-position: right;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+    &--bacground {
+        background-color: #e9e9e9;
+    }
+
+    &--value {
+        background-color: #f9f9f9;
+    }
+
+
+    &--bcg-green {
+        background-color: #7cc576;
+    }
+
+
+    &--footer {
+        background-color: #222222;
+        color: #ececec;
+    }
+}
+
+
+// Media queries 
+
+
+@mixin l-section\@small_lanscape {
+    .l-section {
+        &--intro {
+            margin-top: -45px;
+        }
+    }
+}
+
+// screen > 460px
+@mixin l-section\@screen_small {
+    .l-section {
+        &--intro {
+            height: 533px;
+        }
+    }
+}
+
+// screen > 1024px
+@mixin l-section\@screen_wide {
+    .l-section {
+        &--project {
+            background: url('../img/projects/ipad.png');
+            background-position: bottom 0 right 0;
+            background-repeat: no-repeat;
+        }
+    }
+}

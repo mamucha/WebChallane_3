@@ -1,0 +1,27 @@
+.l-header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    font-family: "Montserrat", sans-serif;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 115px;
+        max-width: 934px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@mixin l-header\@small_lanscape {
+    .l-header {
+        &__wrapper {
+            height: 80px;
+        }
+    }
+}

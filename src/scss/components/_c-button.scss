@@ -1,0 +1,44 @@
+.c-button {
+    display: inline-block;
+    padding: 18px 26px;
+    border-radius: 35px;
+    border: 0;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .7);
+    background-color: #7CC576;
+    font-family: Montserrat;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    height: 60px;
+    cursor: pointer;
+    transition: .4s linear;
+
+    &:hover {
+        background-color: #fff;
+        color: black;
+        text-shadow: none;
+    }
+
+
+    &--learn {
+        margin-top: 55px;
+    }
+
+    &--bcg-green {
+        margin-top: 30px;
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+    }
+
+}
+
+// Media queries 
+//screen > 1024
+@mixin c-button\@screen_wide {
+    .c-button {
+        &--learn {
+            margin-top: 50px;
+        }
+    }
+}

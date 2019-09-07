@@ -1,0 +1,25 @@
+.c-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__logo {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+// Media queries 
+//screen> 768px
+@mixin c-company\@screen_medium {
+
+    .c-company {
+        flex-direction: row;
+
+        &__logo {
+            padding: 0;
+        }
+    }
+}

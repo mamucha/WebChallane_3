@@ -1,0 +1,57 @@
+/*
+    
+src/
+|    js/
+|     └── app.js
+|    scss/
+|       ├── base
+|       │   ├── global.scss          
+|       │   ├── normalize.scss         
+|       ├── components
+|       │   ├── c-back-top
+|       │        └── c-back-top.scss
+|       │   ├── c-menu
+|       │       └── c-menu.scss
+|       │   ├── c-company.scss       
+|       │   ├── c-features.scss          
+|       │   ├── c-header.scss          
+|       │   ├── c-list.scss 
+|       │   ├── c-logo.scss          
+|       │   ├── c-opinion.scss          
+|       │   ├── c-project.scss         
+|       │   └── c-socials.scss                
+|       ├── layout
+|       │   ├── l-wrapper
+|       │        └── l-wrapper.scss                     
+|       │   ├── l-header.scss         
+|       │   ├── l-section.scss           
+|       │   └── media-queries.scss                
+|       └── style.sass
+    
+ */
+
+// #1 Base
+@import './base/normalize.scss';
+@import './base/global.scss';
+
+
+// #2 components
+@import './components/c-back-top/c-back-top';
+@import './components/c-logo';
+@import './components/c-menu/c-menu';
+@import './components/c-header';
+@import './components/c-button';
+@import './components/c-features';
+@import './components/c-list';
+@import './components/c-project';
+@import './components/c-opinion';
+@import './components/c-company';
+@import './components/c-socials';
+
+// #3 layout
+@import './layout/l-section';
+@import './layout/l-header';
+@import './layout/l-wrapper/l-wrapper';
+
+// #4 media-queries
+@import './layout/media-queries.scss';

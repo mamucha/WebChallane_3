@@ -1,0 +1,13 @@
+.c-list {
+    color: #cccccc;
+    list-style: none;
+
+
+    &__item {
+        margin-bottom: 10px;
+        background: url('../img/offer/circle-checkmark.svg');
+        background-repeat: no-repeat;
+        padding: 8px 0 8px 50px;
+        background-position: 0 2px;
+    }
+}

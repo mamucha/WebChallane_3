@@ -1,0 +1,74 @@
+.c-opinion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    &__image {
+
+        margin-bottom: 15px;
+
+        &--pic {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        background-color: #f9f9f9;
+        margin: 0 40px;
+        padding: 20px 20px;
+    }
+
+    &__qoute {
+        margin-bottom: 18px;
+        color: #777777;
+        font-family: "Roboto Slab";
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    &__author {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 36px;
+    }
+}
+
+
+// Media queries 
+// screen > 1024px
+@mixin c-opinion\@screen_wide {
+    .c-opinion {
+        flex-direction: row;
+        width: 905px;
+        height: 220px;
+
+        &__image {
+            margin-bottom: 0;
+
+            &--reversal {
+                order: 2;
+            }
+        }
+
+        &__text {
+            width: 604px;
+            height: 170px;
+        }
+
+        &__qoute {
+            width: 545px;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.l-wrapper {
+    max-width: 934px;
+    width: 100%;
+    margin: 70px auto;
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all .5s linear;
+
+    &--showing {
+        opacity: 1;
+        transform: none;
+    }
+
+    &--service {
+        opacity: 1;
+    }
+
+    &--side {
+        width: 100%;
+        text-align: left;
+        background: url('../img/offer/background.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 65px 35px 50px 35px;
+        margin: 0;
+        max-width: none;
+        align-self: flex-end;
+        position: relative;
+        opacity: 1;
+        transform: none;
+
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -100;
+        }
+
+        &::after {
+            content: "";
+            width: 200px;
+            height: 100%;
+            top: 0;
+            left: -200px;
+            position: absolute;
+            background: url('../img/offer/gear.png');
+            background-repeat: no-repeat;
+            background-position: left;
+        }
+    }
+
+    &--company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &--socials {
+        margin: 40px 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #555555;
+        font-family: Montserrat;
+        font-size: 14px;
+        padding: 0 30px;
+        opacity: 1;
+        transform: none;
+    }
+
+    &--footer {
+        margin: 70px 0;
+    }
+}
+
+
+// Media queries 
+//screen > 460px
+@mixin l-wrapper\@screen_small {
+    .l-wrapper {
+        height: auto;
+    }
+}
+
+// screen>768px 
+@mixin l-wrapper\@screen_medium {
+    .l-wrapper {
+        width: 90%;
+
+        &--side {
+            width: 75%;
+            padding: 100px;
+        }
+
+        &--socials {
+            justify-content: space-around;
+        }
+    }
+}
+
+
+// screen > 1024px
+@mixin l-wrapper\@screen_wide {
+    .l-wrapper--socials {
+        &--socials {
+            justify-content: center;
+        }
+    }
+}
